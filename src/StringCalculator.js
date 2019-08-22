@@ -1,21 +1,35 @@
-function Add(array) {
-    var sum = 0;
-    
-
-    for (let i in array) {
-        if (isNaN(array[i])) {
-            let x = String.array[i];
-            x = split.array[i];
-
-            for(i < x.length; i++;) {
-                if (x[i]){
-                    
-                }
-            }
+var add = function(string) {
+    var digits = function() {
+      var arr = []
+      tokens = string.split(/[^\d|^-]/),
+      for (i = 0; i<tokens.length; i++) {
+        arr.push(Number(tokens[i]));
+      }
+  
+      return arr;
+    }();
+  
+    var negatives = function() {
+      var arr = [],
+          i = 0;
+      for(; i<digits.length; i++) {
+        if (digits[i] < 0) {
+          arr.push(digits[i]);
         }
-        else {
-            sum = sum + parseInt(array[i]);
-        }  
+      }
+  
+      return arr;
+    }();
+  
+    if (negatives.length) {
+      throw "Negatives not allowed: " + negatives.join(', ');
+    }
+  
+    var sum = 0,
+        i = 0;
+    for (; i<digits.length; i++) {
+      sum += digits[i];
     }
     return sum;
-}
+  }
+  
