@@ -1,7 +1,6 @@
 var add = function(string) {
     var digits = function() {
-      var arr = []
-      tokens = string.split(/[^\d|^-]/),
+      var arr = [],tokens = string.split(/[^\d|^-]/),
       for (i = 0; i<tokens.length; i++) {
         arr.push(Number(tokens[i]));
       }
