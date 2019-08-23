@@ -26,7 +26,8 @@ var Add = function(string) {
   
       return array;
     }();
-  
+    
+    //adds all digits in the array to sum
     var sum = 0;
     for (var i = 0; i < digits.length; i++) {
       sum = sum + digits[i];
