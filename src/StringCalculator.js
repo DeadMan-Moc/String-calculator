@@ -1,33 +1,35 @@
-var add = function(string) {
+var Add = function(string) {
+
+    //splits given string with the regex.
+    //
     var digits = function() {
-      var arr = [],tokens = string.split(/[^\d|^-]/),
-      for (i = 0; i<tokens.length; i++) {
-        arr.push(Number(tokens[i]));
+      var array = [];
+      var str2Splitted;
+      str2Splitted = string.split(/[^\d|^-]/);
+      for (i = 0; i < str2Splitted.length; i++) {
+        array.push(Number(str2Splitted[i]));
       }
-  
-      return arr;
+      return array;
     }();
   
-    var negatives = function() {
-      var arr = [],
-          i = 0;
-      for(; i<digits.length; i++) {
+
+    //checks for negativesmin the array.
+    //if found it pushes it to array
+    var Neg = function() {
+      var array = [];
+
+      for(var  i = 0; i < digits.length; i++) {
         if (digits[i] < 0) {
-          arr.push(digits[i]);
+          array.push(digits[i]);
         }
       }
   
-      return arr;
+      return array;
     }();
   
-    if (negatives.length) {
-      throw "Negatives not allowed: " + negatives.join(', ');
-    }
-  
-    var sum = 0,
-        i = 0;
-    for (; i<digits.length; i++) {
-      sum += digits[i];
+    var sum = 0;
+    for (var i = 0; i < digits.length; i++) {
+      sum = sum + digits[i];
     }
     return sum;
   }
