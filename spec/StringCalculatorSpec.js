@@ -18,12 +18,6 @@ describe("Calculator for strings", ()=>{
         expect(answer).toThrow(new Error("Negative numbers not allowed"));
     })
     
-    it ("Checks if it can add intergers with delimiters", ()=> {
-        var raw = ("1,\n");
-        var answer = Add(raw)
-        expect(answer).toThrow(new Error("Error cannot be added"));
-    })
-    
     it ("Sum of multiple numbers with delimiters", ()=> {
         var raw = ("1\n2,3");
         var answer = Add(raw)
