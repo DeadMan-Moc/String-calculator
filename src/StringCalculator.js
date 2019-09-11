@@ -11,9 +11,9 @@
       }
       return array;
     }();
+  
 
-
-    //checks for negativesmin the array.
+    //checks for negatives in the array.
     //if found it pushes it to array
     var Neg = function() {
       var array = [];
@@ -23,10 +23,10 @@
           array.push(digits[i]);
         }
       }
-
+  
       return array;
     }();
-
+    
     //adds all digits in the array to sum
     var sum = 0;
     for (var i = 0; i < digits.length; i++) {
@@ -34,3 +34,4 @@
     }
     return sum;
   }
+  
