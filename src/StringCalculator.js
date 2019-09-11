@@ -11,8 +11,12 @@
       }
       return array;
     }();
+   
+   if(digits.includes("-")){
+        throw new Error("Error negatives not allowed")
+    };
   
-
+   
     //checks for negatives in the array.
     //if found it pushes it to array
     var Neg = function() {
