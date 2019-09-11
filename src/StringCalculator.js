@@ -1,4 +1,4 @@
- var Add = function(string) {
+var Add = function(string) {
 
     //splits given string with the regex.
     //
@@ -11,13 +11,9 @@
       }
       return array;
     }();
-   
-   if(digits.includes("-")){
-        throw new Error("Error negatives not allowed")
-    };
   
-   
-    //checks for negatives in the array.
+
+    //checks for negativesmin the array.
     //if found it pushes it to array
     var Neg = function() {
       var array = [];
